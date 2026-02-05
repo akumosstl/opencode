@@ -1,0 +1,23 @@
+Run command spring-boot-feature to implement a new REST endpoint for creating and listing orders with validation and persistence.
+
+-----------------------------------
+
+
+Run command spring-boot-refactor on the payment module to reduce complexity and improve service boundaries.
+
+
+----------------------------------
+
+
+Run command spring-boot-security-audit on the entire project focusing on Spring Security and exposed endpoints.
+
+
+---------------------------------
+
+Run command spring-boot-tests for the user service covering success and failure scenarios.
+
+
+--------------------------------
+
+
+Run command spring-boot-persistence-optimize on the order and payment repositories to remove N+1 queries.
