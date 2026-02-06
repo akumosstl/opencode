@@ -8,7 +8,7 @@ version: 1.0
 
 
 
-\# 1. Business Objective
+# 1. Business Objective
 
 
 
@@ -16,11 +16,11 @@ Describe the real business goal (not technical solution).
 
 
 
-\- Why does this feature exist?
+- Why does this feature exist?
 
-\- What problem does it solve?
+- What problem does it solve?
 
-\- What metric does it improve?
+- What metric does it improve?
 
 
 
@@ -28,7 +28,7 @@ Describe the real business goal (not technical solution).
 
 
 
-\# 2. Functional Requirements
+# 2. Functional Requirements
 
 
 
@@ -46,33 +46,11 @@ FR-3:
 
 Each requirement must be:
 
-\- Observable
+- Observable
 
-\- Testable
+- Testable
 
-\- Non-ambiguous
-
-
-
----
-
-
-
-\# 3. Non-Functional Requirements
-
-
-
-\- Performance constraints (e.g., < 200ms p95)
-
-\- Availability requirements
-
-\- Consistency model (strong / eventual)
-
-\- Throughput expectations
-
-\- Security requirements
-
-\- Audit requirements
+- Non-ambiguous
 
 
 
@@ -80,15 +58,37 @@ Each requirement must be:
 
 
 
-\# 4. Domain Model Impact
+# 3. Non-Functional Requirements
+
+
+
+- Performance constraints (e.g., < 200ms p95)
+
+- Availability requirements
+
+- Consistency model (strong / eventual)
+
+- Throughput expectations
+
+- Security requirements
+
+- Audit requirements
+
+
+
+---
+
+
+
+# 4. Domain Model Impact
 
 
 
 Entities involved:
 
-\- Entity A
+- Entity A
 
-\- Entity B
+- Entity B
 
 
 
@@ -104,11 +104,11 @@ Invariants?
 
 
 
-\# 5. API Contracts
+# 5. API Contracts
 
 
 
-\### Endpoint
+### Endpoint
 
 Method:
 
@@ -116,45 +116,27 @@ Path:
 
 
 
-\### Request
+### Request
 
 Example JSON:
 
 
 
-\### Response
+### Response
 
 Example JSON:
 
 
 
-\### Error Cases
+### Error Cases
 
-\- 400:
+- 400:
 
-\- 401:
+- 401:
 
-\- 404:
+- 404:
 
-\- 409:
-
-
-
----
-
-
-
-\# 6. Data \& Persistence
-
-
-
-\- Tables affected
-
-\- New indexes?
-
-\- Transaction boundaries
-
-\- Idempotency strategy (if needed)
+- 409:
 
 
 
@@ -162,33 +144,17 @@ Example JSON:
 
 
 
-\# 7. Edge Cases
+# 6. Data \& Persistence
 
 
 
-\- Duplicate requests
+- Tables affected
 
-\- Race conditions
+- New indexes?
 
-\- Partial failures
+- Transaction boundaries
 
-\- Network retries
-
-
-
----
-
-
-
-\# 8. Observability
-
-
-
-\- Logs required
-
-\- Metrics required
-
-\- Tracing required
+- Idempotency strategy (if needed)
 
 
 
@@ -196,17 +162,17 @@ Example JSON:
 
 
 
-\# 9. Security Considerations
+# 7. Edge Cases
 
 
 
-\- Required roles
+- Duplicate requests
 
-\- Input validation
+- Race conditions
 
-\- Sensitive fields
+- Partial failures
 
-\- Abuse scenarios
+- Network retries
 
 
 
@@ -214,19 +180,53 @@ Example JSON:
 
 
 
-\# 10. Definition of Done
+# 8. Observability
 
 
 
-\- \[ ] Tests written
+- Logs required
 
-\- \[ ] API documented
+- Metrics required
 
-\- \[ ] Idempotency validated
+- Tracing required
 
-\- \[ ] Metrics added
 
-\- \[ ] Reviewed
+
+---
+
+
+
+# 9. Security Considerations
+
+
+
+- Required roles
+
+- Input validation
+
+- Sensitive fields
+
+- Abuse scenarios
+
+
+
+---
+
+
+
+# 10. Definition of Done
+
+
+
+- [ ] Tests written
+
+- [ ] API documented
+
+- [ ] Idempotency validated
+
+- [ ] Metrics added
+
+- [ ] Reviewed
 
 
 
