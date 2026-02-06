@@ -1,0 +1,15 @@
+Use skill spring-boot-architecture to review the current codebase, identify architectural, performance, and maintainability issues, and apply refactorings directly in the existing files using git-style diffs.
+
+
+--------------------------------------------
+
+
+
+Use skill spring-boot-security to audit the application for security vulnerabilities, misconfigurations, and exposed risks. Report findings ordered by severity and suggest concrete mitigations without modifying code.
+
+
+
+--------------------------------------------
+
+
+Use skill spring-boot-testing to generate or improve unit and integration tests for the affected modules, ensuring high coverage, realistic scenarios, and alignment with the current package structure.

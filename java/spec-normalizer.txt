@@ -1,0 +1,3 @@
+Use spec-normalizer on:
+
+"Users should be able to transfer money between wallets. It must not duplicate transactions. Add logging."

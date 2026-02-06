@@ -1,0 +1,25 @@
+Use agent spring-boot-feature-agent to implement the requested business feature end-to-end following existing Spring Boot patterns and applying changes as git-style diffs.
+
+
+-------------------------------------
+
+
+
+Use agent spring-boot-refactor-agent to refactor the specified modules for code quality, readability, and performance without changing observable behavior.
+
+
+--------------------------------------
+
+
+Use agent spring-boot-security-agent to audit the application security configuration and codebase, reporting vulnerabilities and mitigations ordered by severity.
+
+
+--------------------------------------
+
+Use agent spring-boot-testing-agent to create or improve unit and integration tests for the affected components with high coverage and deterministic results.
+
+
+--------------------------------------
+
+
+Use agent spring-boot-persistence-agent to design, review, or optimize the persistence layer, including entities, repositories, and transactions, applying changes as git-style diffs.
