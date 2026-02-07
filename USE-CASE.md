@@ -640,12 +640,55 @@ Rules:
 - Do NOT modify unrelated files.
 - Write or update tests if required.
 - Follow project standards strictly.
-- Output git-style diff only.
+- Don´t need explain nothing, less verbose output
 
 TASK:
 
-### **Task domain-2: Create Document value object**
-- **Description**: Implement immutable Document value object with validation
-- **Acceptance Criteria**: All fields validated, null safety, equals/hashCode implemented
-- **Technical Notes**: Use final fields, validation annotations, constructor validation
+Specification and planning read these files:
+@.opencode/context/features/lista_documentos_por_status/normalize-plan-spec-.md
+@.opencode/context/features/lista_documentos_por_status/normalize-plan-tasks-spec-.md
 
+
+## **API Layer Tasks**
+
+### **Task api-1: Create DocumentQueryRequest DTO**
+- **Description**: Request DTO with validation annotations for all parameters
+- **Acceptance Criteria**: All parameters validated, proper error messages
+- **Technical Notes**: Use @Valid, validation annotations, nested DTOs
+
+---
+
+
+# Bug fix
+
+You are using the java-executor agent.
+
+Fix ONLY the following BUG.
+
+Rules:
+- Respect Clean Architecture.
+- Do NOT modify unrelated files.
+- Follow project standards strictly.
+- Don´t need explain nothing, less verbose output
+
+BUG:
+
+Error on startup application see the error log:
+"""
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in br.com.somosadd.submission.document.service.DocumentQueryServiceImpl required a single bean, but 2 were found:
+
+"""
+
+# Cycle
+
+1. Run /plan-feature
+2. Select one task
+3. Invoke java-executor with that task only
+4. Review diff
+5. Repeat

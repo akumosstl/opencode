@@ -1,20 +1,25 @@
 # OpenCode
-Differents files (skills, commands, agents, etc) to build and ruin an agentics flow using not just opencode but mainly.
+Differents files (skills, commands, agents, etc) to build and run agentics flow using not only opencode but mainly.
+
+Even though, the opencode was the target of this repo, everything or almost everything is suiteable for Claude Code and with few changes to Copilot and others.
+
+Repository structure:
+
+```bash
+java/
+|
+springboot/
+|
+template/
+
+```
+
+- ***java***: prompts and .opencode (skills, commands, context and agents) folder based on java projects
+- ***springboot***: prompts and .opencode (skills, commands, context and agents) folder based on spring-boot projects
+- ***template**: templates files
 
 # Execution Flow
 The simple execution flow is:
-
-```
-1. Run /plan-feature
-2. Select one task
-3. Invoke java-executor with that task only
-4. Review diff
-5. Repeat
-```
-
-Adding a spec-normalizer(feature conversion) the flow is:
-
-Use spec-normalizer on:
 
 ```
 Raw Spec
@@ -177,17 +182,7 @@ Firtlly have a
 
 
 
-
-
-
-
-
-
-
-
-\# How use agents in opencode?
-
-
+# How use agents in opencode?
 
 In OpenCode, agents are specialized AI assistants that handle coding tasks. 
 
@@ -197,47 +192,37 @@ Agents can be defined for specific tasks, and subagents can be triggered for spe
 
 
 
-\*\*\*Key Ways to Use Agents in OpenCode:\*\*\*
+***Key Ways to Use Agents in OpenCode:***
 
 
 
-\*\*\*Switching Agents:\*\*\* Use Tab to cycle between active agents in the terminal user interface (TUI).
+***Switching Agents:*** Use Tab to cycle between active agents in the terminal user interface (TUI).
 
 
 
-\*\*\*Custom Instructions (AGENTS.md):\*\*\* Create an AGENTS.md file in your project root to define specific rules for the AI, similar to Cursor's rules. Run /init in OpenCode to generate this automatically.
+***Custom Instructions (AGENTS.md):*** Create an AGENTS.md file in your project root to define specific rules for the AI, similar to Cursor's rules. Run /init in OpenCode to generate this automatically.
 
 
 
-\*\*\*Agent Configuration:\*\*\* Define specialized agents in ~/.config/opencode/agents/ or .opencode/agents/ to handle specific tasks.
+***Agent Configuration:*** Define specialized agents in ~/.config/opencode/agents/ or .opencode/agents/ to handle specific tasks.
 
 
 
-\*\*\*Subagent Invocation:\*\*\* Use Agent configuration in commands to specify which agent executes a task, allowing a main agent to delegate work to specialized subagents.
+***Subagent Invocation:*** Use Agent configuration in commands to specify which agent executes a task, allowing a main agent to delegate work to specialized subagents.
 
 
 
-\*\*\*Agent Skills:\*\*\* Use SKILL.md files in your repository to allow agents to discover and utilize reusable instructions.
+***Agent Skills:*** Use SKILL.md files in your repository to allow agents to discover and utilize reusable instructions.
 
 
-
-\*\*\*GitHub Integration:\*\*\* Set up the OpenCode GitHub app to run agents on pull requests and comments by including /oc or /opencode. 
-
+***GitHub Integration:*** Set up the OpenCode GitHub app to run agents on pull requests and comments by including /oc or /opencode. 
 
 
-
-
-\*\*\*Common Agent Commands:\*\*\*
-
-
+***Common Agent Commands:***
 
 /init: Initializes a new AGENTS.md file.
 
-
-
 opencode --agent <name>: Starts a session directly with a specific agent. 
-
-
 
 Ensure you have the required API keys (e.g., Anthropic) set up in your environment for the agents to function. 
 
