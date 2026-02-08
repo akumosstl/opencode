@@ -1,9 +1,11 @@
-# OpenCode
-Differents files (skills, commands, agents, etc) to build and run agentics flow using not only opencode but mainly.
 
-Even though, the opencode was the target of this repo, everything or almost everything is suiteable for Claude Code and with few changes to Copilot and others.
+# 🚀 OpenCode
 
-Repository structure:
+🗂️ **OpenCode** provides various files (skills, commands, agents, etc.) to build and run agentic flows, primarily using opencode, but also adaptable for other platforms.
+
+💡 While opencode is the main focus, most resources here are also suitable for Claude Code and, with minor tweaks, for Copilot and others.
+
+## 📁 Repository Structure
 
 ```bash
 java/
@@ -11,39 +13,41 @@ java/
 springboot/
 |
 template/
-
 ```
 
-- ***java***: prompts and .opencode (skills, commands, context and agents) folder based on java projects
-- ***springboot***: prompts and .opencode (skills, commands, context and agents) folder based on spring-boot projects
-- ***template**: templates files
+- 📦 **java**: Prompts and .opencode (skills, commands, context, agents) for Java projects
+- 🌱 **springboot**: Prompts and .opencode (skills, commands, context, agents) for Spring Boot projects
+- 📝 **template**: Template files
 
-# Execution Flow
-The simple execution flow is:
+---
+
+## ⚙️ Execution Flow
+
+The basic execution flow:
 
 ```
 Raw Spec
-   ↓
+   ⬇️
 spec-normalizer
-   ↓
+   ⬇️
 feature-planner
-   ↓
+   ⬇️
 task-breaker
-   ↓
+   ⬇️
 java-executor
 ```
 
-Prompt:
+### 🧑‍💻 Example Prompt
 
 ```bash
 Use spec-normalizer on:
 
 "Users should be able to transfer money between wallets. It must not duplicate transactions. Add logging."
-
-
 ```
 
-# Folder Structure
+---
+
+## 🗂️ Folder Structure Example
 
 ```bash
 .opencode/
@@ -55,8 +59,6 @@ Use spec-normalizer on:
  │    └── plan-feature.md
  └── context/
       └── project-context.md
-
-
 ```
 
 # Running
