@@ -5,7 +5,6 @@
 
 1️⃣ spec-normalizer
 
-```bash
 
 You are using the spec-normalizer agent.
 
@@ -21,71 +20,21 @@ Rules:
 - Add Open Questions for ambiguities.
 
 RAW SPEC:
-"""
-Implement a Rest Controller following these specification/feature:
-
-3. Lista de Documentos por Status
-
-`GET /api/documents`
-Retorna uma lista paginada de documentos filtrados por status e intervalo de datas.
-
-**Parâmetros de Query:**
-| Parâmetro | Tipo | Obrigatório | Descrição |
-|-----------|------|----------|-------------|
-| `status` | string | Sim | Status do documento: `registered`, `processing`, `critiques`, `errors` |
-| `start_date` | string (ISO 8601) | Sim | Data inicial (YYYY-MM-DD) |
-| `end_date` | string (ISO 8601) | Não | Data final (YYYY-MM-DD) |
-| `page` | integer | Não | Número da página (padrão: 1) |
-| `per_page` | integer | Não | Itens por página (padrão: 10, máximo: 100) |
-| `search` | string | Não | Buscar por número do documento |
-
-**Exemplo de Requisição:**
-http
-GET /api/documents?status=errors&start_date=2025-11-26&end_date=2025-11-26&page=1&per_page=10
 
 
-**Resposta:**
-json
-{
-  "data": [
-    {
-      "document_type": "Document",
-      "document_number": "1234567",
-      "load_date": "2025-11-27",
-      "status": "error_101",
-      "status_label": "Error 101",
-      "details": "Invalid 'policyInsurance' field. Value must match specified format.",
-      "additional_info": "Returned by registry office: Non-existent account"
-    },
-    {
-      "document_type": "Claim",
-      "document_number": "0987812",
-      "load_date": "2025-11-26",
-      "status": "error_registry",
-      "status_label": "Registry Error",
-      "details": "Returned by registry office: Non-existent account"
-    },
-    {
-      "document_type": "Document",
-      "document_number": "7654321",
-      "load_date": "2025-11-26",
-      "status": "error_vg",
-      "status_label": "VG Error",
-      "details": "Umbrella VG cancelled"
-    }
-  ],
-  "meta": {
-    "current_page": 1,
-    "per_page": 10,
-    "total_items": 50,
-    "total_pages": 5,
-    "start_date": "2025-11-26",
-    "end_date": "2025-11-26"
-  }
-}
+Refactor the DocumentQueryController locate at:
+@sro-submission-document-service-v3\src\main\java\br\com\somosadd\submission\document\controller\DocumentQueryController.java
+
+Refactor DocumentQueryController and all its flow (dtos, services, entities) knowing that the entities, repositories and dtos are locate from sro-submission-entity.
+
+Refactor methods like convertToDocumentData in @sro-submission-document-service-v3\src\main\java\br\com\somosadd\submission\document\service\DocumentQueryServiceImpl.java
 
 
-```
+
+
+---
+
+
 
 Change from plan mode to agent and prompt:
 
@@ -673,15 +622,14 @@ Rules:
 
 BUG:
 
-Error on startup application see the error log:
-"""
+
 ***************************
 APPLICATION FAILED TO START
 ***************************
 
 Description:
 
-Parameter 0 of constructor in br.com.somosadd.submission.document.service.DocumentQueryServiceImpl required a single bean, but 2 were found:
+Parameter 0 of constructor in br.com.somosadd.submission.document.service.DocumentQueryServiceImpl required a bean of type 'br.com.somosadd.submission.document.infrastructure.repository.DocumentRepository' that could not be found.
 
 """
 
